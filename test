@@ -1,41 +1,25 @@
 #include <iostream>
-#include <string>
-using namespace std;
-int main()
-{
-	int a = 1, b = 0;
-	//Çàäàíèå 1
-	b = 2;
-	int c;
-	c = a - b;
-	cout << "a = 1 - b = 0" << c << endl;
-	//Çàäàíèå 2
-	cout << boolalpha;
+int main() {
+    int height = 6;
+    for (int i = 1; i <= height; i++) {
+        for (int j = height; j > i; j--) {
+            std::cout << ".";
+        }
+        for (int j = 1; j <= (2 * i - 1); j++) {
+            std::cout << "*";
+        }
+        std::cout << std::endl;
+    }
 
-	int a1 = 0, b1 = 0, ñ1 = 1, d = 1;
+    for (int i = height - 1; i >= 1; i--) {
+        for (int j = height; j > i; j--) {
+            std::cout << ".";
+        }
+        for (int j = 1; j <= (2 * i - 1); j++) {
+            std::cout << "*";
+        }
+        std::cout << std::endl;
+    }
 
-	cout << "True = " << (a1 == b1) << endl;
-	cout << "False = " << (a1 == d) << endl;
-
-	cout << "True = " << (a1 != c1) << endl;
-	cout << "False = " << (b1 != a1) << endl;
-
-	cout << "True = " << (c1 > a1) << endl;
-	cout << "False = " << (b1 > d) << endl;
-
-	cout << "True = " << (a1 < c1) << endl;
-	cout << "False = " << (d < b1) << endl;
-
-	cout << "True = " << (c1 >= a1) << endl;
-	cout << "False = " << (b1 >= d) << endl;
-
-	cout << "True = " << (a1 <= c1) << endl;
-	cout << "False = " << (d <= b1) << endl;
-	//Çàäàíèå 3
-
-	int a2 = 5, b2 = 13, c2 = 52, d2 = 13;
-
-	cout << "True = " << (a2 && b2 == d2) << endl;
-	cout << "False = " << (a2 || b2 == d2) << endl;
-
+    return 0;
 }
